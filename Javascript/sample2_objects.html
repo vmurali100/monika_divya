@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <p></p>
+    </div>
+    <script>
+      var myDetails = {
+        name: "Murali",
+        job: "Developer",
+        city: "Bangalore",
+        email: "vmurali100@gmail.com",
+      };
+
+      myDetails.mob = 9663856625; // Addding a Property with "." (dot)notation
+      myDetails["state"] = "Karnataka"; // Adding Property With [] (Squere Bracket)
+      console.log(myDetails);
+
+      //   document.querySelector("p").innerHTML =
+      //     "My Name is :" +
+      //     myDetails.name +
+      //     "<br> My Job is :" +
+      //     myDetails.job +
+      //     "<br> My City is :" +
+      //     myDetails.city;
+      var result = "";
+      for (a in myDetails) {
+        result = result + a + " : " + myDetails[a] + "<br>";
+      }
+
+      document.querySelector("p").innerHTML = result;
+
+      console.log(Object.values(myDetails));
+    </script>
+  </body>
+</html>
