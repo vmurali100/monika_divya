@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="displayCars()">Display All Cars</button>
+    <button onclick="removeLastValue()">Remove A Last Value</button>
+    <button onclick="shiftFirstValue()">Remove First Value</button>
+    <button onclick="removeMiddleValue()">Remove Middle Value</button>
+    <div></div>
+    <script>
+      var cars = ["Swift", "Tata Nano", "Ford", "Benz"];
+
+      //Defining a function
+      function displayCars() {
+        var results = "";
+        var forCars = cars.forEach(function (value) {
+          results = results + value + "<br>";
+        });
+        document.querySelector("div").innerHTML = results;
+      }
+
+      function removeLastValue() {
+        cars.pop();
+        displayCars();
+      }
+
+      function shiftFirstValue() {
+        cars.shift();
+        displayCars();
+      }
+
+      function removeMiddleValue() {
+        cars.splice(1);
+        displayCars();
+      }
+      //   displayCars();
+    </script>
+  </body>
+</html>
