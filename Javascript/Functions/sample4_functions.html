@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="addAStudentAtBeginning()">Add A Student At Beginning</button>
+    <div></div>
+    <script>
+        var students = [{fname:"Divya"},{fname:"Monica"},{fname:"Krishna"},{fname:"Murali"}]
+
+        // function displayStudents() {
+        //     var results = ""
+        //     students.forEach(function (obj){
+        //         results = results+obj.fname+"<br>"
+        //     })
+        //     document.querySelector("div").innerHTML=results
+        // }
+
+        // function addAStudentAtBeginning() {
+        //     students.unshift({fname:"Ram"})
+        //     displayStudents();
+            
+        // }
+
+        var mStudents=[{
+        name: "Murali",
+        job: "Developer",
+        city: "Bangalore",
+        email: "vmurali100@gmail.com",
+      },
+      {
+        name: "Krishna",
+        job: "Sr Developer",
+        city: "Bangalore",
+        email: "krishna@gmail.com",
+      },
+      {
+        name: "Ram",
+        job: "Tester",
+        city: "Bangalore",
+        email: "vvRam@gmail.com",
+      }]
+
+      var results = ""
+      mStudents.forEach(function (obj){
+        for(a in obj){
+            results=results+obj[a]+"<br>"
+        }
+
+        results=results+"<br>"
+      })
+
+      document.querySelector("div").innerHTML=results
+    </script>
+</body>
+</html>

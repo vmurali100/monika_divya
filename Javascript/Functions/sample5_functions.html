@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="myUsers" onchange="getUserInfo()">
+        
+    </select>
+    <br> <br>
+    <div></div>
+    <script src="./data.js"></script>
+    <script>
+        function displyFnames(){
+            data.forEach(function (obj){
+               var opt =  document.createElement("option")
+               opt.innerHTML = obj.fname
+               document.querySelector("select").appendChild(opt)
+            })
+        }
+
+        function getUserInfo() {
+            var selectedValue = document.querySelector("select").value
+            console.log(selectedValue)
+           var selectedUser =  data.find(function (obj){
+                return obj.fname == selectedValue
+            })
+
+            displayObject(selectedUser)        }
+
+
+        function displayObject(obj) {
+            var results = ""
+            for(a in obj){
+                results=results+obj[a]+"<br>"
+            }
+            document.querySelector("div").innerHTML = results
+        }
+
+        displyFnames()
+    </script>
+</body>
+</html>
