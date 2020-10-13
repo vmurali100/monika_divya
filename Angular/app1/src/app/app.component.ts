@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
+  receivedMsg =""
   myName = "Murali" // Declaring a String In Class
   person = {
     fname:"Ram",
@@ -20,6 +21,13 @@ export class AppComponent {
 
   ngOnInit(){
     console.log(this.personKeys)
+  }
+
+  // Step 5 : Created a Function to receive Data From Child Component 
+  
+  receiveMessageFromChild(msg){
+    console.log(msg)
+    this.receivedMsg = msg
   }
 }
 

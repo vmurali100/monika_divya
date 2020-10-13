@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'murali',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MuraliComponent implements OnInit {
 
+  @Output() sendInfo = new EventEmitter() // Step 1 : created a Custom Event ; 
+  message = "Welcome Message from Child Component"
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  sendMessageToParent(){
+   this.sendInfo.emit(this.message) ; //Step 2 :  Emitting or Throwing Data towards Up Ward Direction
+  }
 }
