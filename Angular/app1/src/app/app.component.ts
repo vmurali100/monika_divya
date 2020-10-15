@@ -20,7 +20,6 @@ export class AppComponent {
   users = ["Murali","Ram","Monica","Divya"]
 
   ngOnInit(){
-    console.log(this.personKeys)
   }
 
   // Step 5 : Created a Function to receive Data From Child Component 

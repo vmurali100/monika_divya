@@ -1,2 +1,35 @@
-<p>sibling1 works!</p>
-<button (click)="sendMessageToSibling2()">Send Message to Sibling2</button>
+<!-- <p>sibling1 works!</p>
+<button (click)="sendMessageToSibling2()">Send Message to Sibling2</button> -->
+
+<!-- <form #userForm="ngForm">
+    <label for="fname">First Name </label>
+    <input type="text" name="fnmae" ngModel> <br>
+    <button (click)="getUser(userForm)">Get User</button>
+</form> -->
+
+<form [formGroup]="userForm">
+  <label for="fname">First Name </label>
+  <input type="text" name="fnmae" formControlName="fname" /> <br />
+  <label for="lname">Last Name </label>
+  <input type="text" name="lname" formControlName="lname" />
+  <button (click)="getUser()">Get User</button>
+</form>
+<hr />
+<table border="1">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of allUsers">
+        <td>{{user.fname}}</td>
+        <td>{{user.lname}}</td>
+        <td><button>Edit User</button></td>
+        <td><button (click)="deleteUser(user)">Delete User</button></td>
+    </tr>
+  </tbody>
+</table>

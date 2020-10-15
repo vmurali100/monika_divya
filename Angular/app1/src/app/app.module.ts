@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { SampleComponent } from './sample/sample.component';
 import { MuraliComponent } from './murali/murali.component';
@@ -16,7 +17,10 @@ import { Sibling2Component } from './sibling2/sibling2.component';
     Sibling2Component
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
