@@ -1,18 +1,18 @@
 {
   "users": [
     {
-      "fname": "Murali",
+      "fname": "Murali V",
       "lname": "Krishna",
       "id": 1
     },
     {
-      "fname": "Ram",
+      "fname": "Ram ",
       "lname": "Krishna",
       "id": 2
     },
     {
-      "fname": "Hari",
-      "lname": "Krishna",
+      "fname": "Sam",
+      "lname": "Kumar",
       "id": 3
     }
   ]
