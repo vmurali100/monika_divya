@@ -1,1 +1,6 @@
-<p>home works!</p>
+
+<div class="container">
+    <ul>
+        <li *ngFor="let product of allProducts" routerLink="/features/{{product.productName}}">{{product.productName}}</li>
+    </ul>
+</div>

@@ -1,1 +1,6 @@
-<p>features works!</p>
+<div class="container">
+    <p>Product features</p>
+    <ul *ngIf="currentProduct">
+        <li *ngFor = "let feature of currentProduct.features">{{feature}}</li>
+    </ul>
+</div>
