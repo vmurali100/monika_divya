@@ -1,6 +1,33 @@
-
 <div class="container">
-    <ul>
-        <li *ngFor="let product of allProducts" routerLink="/features/{{product.productName}}">{{product.productName}}</li>
-    </ul>
+  <ul>
+    <!-- <li
+      *ngFor="let product of allProducts"
+      routerLink="/features/{{ product.productName }}"
+    >
+      {{ product.productName | uppercase }}
+    </li> -->
+    <!-- <li
+      *ngFor="let product of allProducts"
+      routerLink="/features/{{ product.productName }}"
+    >
+      {{ product.productName | lowercase }}
+    </li> -->
+    <li
+      *ngFor="let product of allProducts"
+      routerLink="/features/{{ product.productName }}"
+    >
+      {{ product.productName | titlecase | chennaistore }}
+    </li>
+  </ul>
+
+  <p>{{ person | json }}</p>
+  <p>{{ price | number: "1.4-4" }}</p>
+  <p>{{ todaysDate | date: "short" }}</p>
+  <p>{{ todaysDate | date: "shortDate" }}</p>
+  <p>{{ todaysDate | date: "shortTime" }}</p>
+  <p>{{ todaysDate | date: "long" }}</p>
+  <p>{{ 0.25 | percent }}</p>
+  <p>{{ 100 | currency: "EUR" }}</p>
+  <p>{{ 100 | currency: "GBP" }}</p>
+  <p>{{ 100 | currency: "INR" }}</p>
 </div>

@@ -8,7 +8,12 @@ import { ProductService } from 'projects/crud/product.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  person={
+    fname:"Murali",
+    lname:"Krishna"
+  }
+  price = 100.456789
+  todaysDate = new Date()
   constructor(private _http:HttpClient,private ps:ProductService) { }
   allProducts:Product[]
   //NgOn Init method will trigger automatically when this component renders

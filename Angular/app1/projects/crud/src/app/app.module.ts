@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { FeaturesComponent } from './features/features.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductPipe } from './product.pipe';
+import { ChennaistorePipe } from './chennaistore.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     HomeComponent,
     PricingComponent,
-    FeaturesComponent
+    FeaturesComponent,
+    ProductPipe,
+    ChennaistorePipe
   ],
   imports: [
     BrowserModule,
